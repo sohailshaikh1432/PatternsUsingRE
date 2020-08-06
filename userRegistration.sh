@@ -1,9 +1,9 @@
 #!/bin/bash -x
 
 read -p "Enter name : " name
-firstName="^[A-Z]{3}"
+lastName="[A-Z]{3}"
 
-if [[ $name =~ $firstName ]]
+if [[ $name =~ $lastName ]]
 then
 	echo "Name is Valid"
 else
