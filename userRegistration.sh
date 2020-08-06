@@ -1,11 +1,11 @@
 #!/bin/bash -x
 
-read -p "Enter name : " name
-lastName="[A-Z]{3}"
+read -p "Enter name : " email
+emailPattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"
 
-if [[ $name =~ $lastName ]]
+if [[ $email =~ $emailPattern ]]
 then
-	echo "Name is Valid"
+	echo "email is Valid"
 else
-	echo "Name is Invalid"
+	echo "email is Invalid"
 fi
