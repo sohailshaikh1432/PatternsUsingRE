@@ -1,7 +1,7 @@
 #!/bin/bash -x
 
 read -p "Enter 8 character for Password : " password
-passwordPattern="^[a-zA-Z]{8}$"
+passwordPattern="^[a-zA-Z]{8,}$"
 
 if [[ $password =~ $passwordPattern ]]
 then
