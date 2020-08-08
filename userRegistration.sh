@@ -1,9 +1,8 @@
 #!/bin/bash -x
 
-read -p "Enter 8 character for Password : " password
-passwordPattern="^[a-zA-Z]{8,}$"
-
-if [[ $password =~ $passwordPattern ]]
+read -s password
+echo "$password"
+if [[ ${#password} -ge 8 && "$password" == *[[:upper:]]* ]]
 then
 	echo "Password is Valid"
 else
