@@ -1,11 +1,11 @@
 #!/bin/bash -x
+echo "Welcome to user registration problem"
 
-read -p "Enter 8 character for Password : " password
-passwordPattern="[A-Z0-9#@$?]{8,}"
-
-if [[ $password =~ $passwordPattern ]]
+read -p "Enter a password : " password
+pattern=$(($(tr -d '[[:alnum:]]' <<< $password | wc -m)-1))
+if [[ ${#password} -ge 8 && $password == *[[:upper:]]* && $password == *[0-9]* && $pattern -eq 1 ]]
 then
-	echo "Password is Valid"
+	echo "Valid"
 else
-	echo "Password is Invalid"
+	echo "Invalid"
 fi
