@@ -1,7 +1,6 @@
 #!/bin/bash -x
 
 read -p "Enter pattern : " pat
-
 #pattern=^[g]"
 #pattern=[o]*"
 #pattern=(gle)$"
